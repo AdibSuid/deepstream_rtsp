@@ -63,5 +63,6 @@ If the jetson board host running jetpack 6, run this command instead:
 
 12. Once you are inside the docker container, run python script to test the realtime video detection:
     ```bash
+    cd ~
     cd DeepStream-Yolo
     deepstream-app -c deepstream_app_config.txt
