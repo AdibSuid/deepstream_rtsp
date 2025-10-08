@@ -72,7 +72,7 @@ If the jetson board host running jetpack 6, run this command instead:
     nano deepstream_app_config.txt
 
 Below parameters can be changed to optimize the inference:    
-   
+```   
    For Stream configuration:
    
    change batch-size=1(default) to batch-size=8(numbers depends on how many cameras input)
@@ -93,4 +93,4 @@ Below parameters can be changed to optimize the inference:
    gpu-id=0 :
    For Jetson, gpu-id always set to 0;
    *Useful for multi-GPU PCs;
-
+```
