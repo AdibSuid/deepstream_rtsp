@@ -43,22 +43,22 @@ Run yolov11n model inside deepstream 6.3 docker container on jetpack5
 
 10. Pull ultralytics docker image(if the jetson board host running jetpack 5, run this command):
     ```bash
-    sudo docker pull kambing74/deepstream:jetpack5
+    sudo docker pull kambing74/deepstream_rtsp:jetpack5
 
 If the Jetson board host is running JetPack 6, run this command instead:    
    ```
-   sudo docker pull kambing74/deepstream:jetpack6
+   sudo docker pull kambing74/deepstream_rtsp:jetpack6
    ```
 
 MAKE SURE TO CONNECT ALL THE NECESSARY USB DEVICES FIRST BEFORE RUNNING THE DOCKER CONTAINER!!
 
 11. Run the docker container (for jetpack 5):
     ```bash
-    sudo docker run -it --gpus all --ipc=host --runtime=nvidia --privileged -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix kambing74/deepstream:jetpack5
+    sudo docker run -it --gpus all --ipc=host --runtime=nvidia --privileged -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix kambing74/deepstream_rtsp:jetpack5
     ```
 If the jetson board host running jetpack 6, run this command instead:    
    ```
-   sudo docker run -it --gpus all --ipc=host --runtime=nvidia --privileged -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix kambing74/deepstream:jetpack6
+   sudo docker run -it --gpus all --ipc=host --runtime=nvidia --privileged -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix kambing74/deepstream_rtsp:jetpack6
    ```
 
 12. Once you are inside the docker container, run python script to test the realtime video detection:
