@@ -66,3 +66,13 @@ If the jetson board host running jetpack 6, run this command instead:
     cd ~
     cd DeepStream-Yolo
     deepstream-app -c deepstream_app_config.txt
+
+13. If you want to change the configuration, run command line below:
+    ```bash
+    nano deepstream_app_config.txt
+
+Below parameters can be changed to optimize the inference:    
+   ```
+   change batch-size=1(default) to batch-size=8(numbers depends on how many cameras input)
+   change live-source=0(default) to live-source=1(for live stream inputs)
+   ```
