@@ -73,6 +73,26 @@ If the jetson board host running jetpack 6, run this command instead:
 
 Below parameters can be changed to optimize the inference:    
    ```
+   For Stream configuration:
+   
    change batch-size=1(default) to batch-size=8(numbers depends on how many cameras input)
    change live-source=0(default) to live-source=1(for live stream inputs)
+
+   For Camera configuration:
+
+   enable=1 :
+   1 to enable camera;
+   0 to disable camera source;
+
+   type=3 :
+   1 for USB camera;
+   2 for mp4 file;
+   3 for RTSP camera or network stream;
+   4 for multi-URI(rare);
+
+   gpu-id=0 :
+   For Jetson, gpu-id always set to 0;
+   *Useful for multi-GPU PCs;
+
+
    ```
